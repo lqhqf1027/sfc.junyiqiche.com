@@ -24,7 +24,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'http://static-sfc.junyiqiche.com',
+    'value' => 'https://static.sfc.junyiqiche.com',
     'rule' => 'required',
     'msg' => '',
     'tip' => '回事域名',
@@ -54,7 +54,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => 'http://sfc.junyiqiche.com/addons/index/notify',
+    'value' => 'https://sfc.junyiqiche.com/addons/index/notify',
     'rule' => '',
     'msg' => '',
     'tip' => '回调通知地址',

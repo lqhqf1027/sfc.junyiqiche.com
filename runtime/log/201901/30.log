@@ -262,3 +262,754 @@
 [ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162250s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.167231s ]
 [ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 配置' , '{\"name\":\"upyun\",\"dialog\":\"1\",\"row\":{\"bucket\":\"static-sfc-jy\",\"cdnurl\":\"http:\\/\\/static-sfc.junyiqiche.com\",\"uploadurl\":\"https:\\/\\/v0.api.upyun.com\\/static-sfc-jy\",\"notifyurl\":\"http:\\/\\/sfc.junyiqiche.com\\/addons\\/index\\/notify\",\"formkey\":\"FGq5W4pwxVvQZHlUEH\\/JFK6Dwpg=\",\"savekey\":\"\\/uploads\\/{year}{mon}{day}\\/{filemd5}{.suffix}\",\"expire\":\"7200\",\"maxsize\":\"20M\",\"mimetype\":\"jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx,pdf\",\"multiple\":\"1\"}}' , '/admin/addon/config?name=upyun&dialog=1' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548862383) [ RunTime:0.169051s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:37:40+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.240330s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.158142s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.160132s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159538s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.133547s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:37:41+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.257114s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.166511s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159780s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159990s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162280s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:37:42+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.242552s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167006s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159718s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.161269s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.160380s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.164469s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:37:44+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.212651s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.157679s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.170345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158736s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.164988s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.161826s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:37:48+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.250086s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.168047s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.167529s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158172s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.163159s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:37:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1548862668793
+[ sql ] [ DB ] CONNECT:[ UseTime:0.242554s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.166731s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.161740s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.157905s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162310s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.160174s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.160449s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.162187s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:38:38+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.246332s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.168393s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159940s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.160484s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162569s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:38:39+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.534762s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.158557s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.160541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158666s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.242306s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.164456s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:38:41+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.240531s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.166482s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159681s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.569654s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.218886s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.159111s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:38:42+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.215018s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167127s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159766s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.169545s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.161454s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:38:48+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1548862724269
+[ sql ] [ DB ] CONNECT:[ UseTime:1.600492s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.158357s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.160471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159465s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.469162s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.163664s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.167262s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.162893s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:44:25+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.168429s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.165998s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.129779s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.149863s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.132197s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.101859s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:44:31+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon/config?name=upyun&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.239328s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.127590s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.139807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.112572s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.178809s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:44:49+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/config?name=upyun&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.237339s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.168636s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.170530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.178986s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.128584s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.142524s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 配置' , '{\"name\":\"upyun\",\"dialog\":\"1\",\"row\":{\"bucket\":\"static-sfc-jy\",\"cdnurl\":\"https:\\/\\/static-sfc.junyiqiche.com\",\"uploadurl\":\"https:\\/\\/v0.api.upyun.com\\/static-sfc-jy\",\"notifyurl\":\"https:\\/\\/sfc.junyiqiche.com\\/addons\\/index\\/notify\",\"formkey\":\"FGq5W4pwxVvQZHlUEH\\/JFK6Dwpg=\",\"savekey\":\"\\/uploads\\/{year}{mon}{day}\\/{filemd5}{.suffix}\",\"expire\":\"7200\",\"maxsize\":\"20M\",\"mimetype\":\"jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx,pdf\",\"multiple\":\"1\"}}' , '/admin/addon/config?name=upyun&dialog=1' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548863089) [ RunTime:0.121049s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:44:56+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1548862724270
+[ sql ] [ DB ] CONNECT:[ UseTime:0.251757s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.142884s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.105507s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.129346s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.229124s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.158832s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.128922s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.140326s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:45:05+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1548862724271
+[ sql ] [ DB ] CONNECT:[ UseTime:0.175934s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.135416s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.140195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.128438s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.161924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.148696s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.131501s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.118343s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:45:20+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.197909s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.134726s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.109705s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.140850s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.140410s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:45:21+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.222497s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167333s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159791s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.139831s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.130965s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.136091s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:45:22+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.243173s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.176779s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.111014s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.098857s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.142095s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.163876s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:45:24+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.243801s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167054s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.161128s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158751s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162212s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:45:27+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1548863124595
+[ sql ] [ DB ] CONNECT:[ UseTime:0.191141s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.446335s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.161580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.168864s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.150952s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.163556s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.137749s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.181382s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:47:09+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.228860s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.138735s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.137437s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.099727s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.142983s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.110558s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:47:14+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon/config?name=upyun&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.237676s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.135404s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.109620s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.099766s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.131612s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:57:47+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.219731s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.137080s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.129739s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.130415s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.132681s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:57:48+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.179687s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.138529s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159216s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.161233s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.140860s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:57:49+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.209022s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.120751s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.127545s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158559s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.135546s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.166755s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:57:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.211299s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.137750s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.139915s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.122319s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.101798s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:58:04+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.216675s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.117522s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.169493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.104126s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.137370s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:58:06+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/profile/index?sort=id&order=desc&offset=0&limit=10&_=1548863884745
+[ sql ] [ DB ] CONNECT:[ UseTime:0.226098s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.196994s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.161139s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.110407s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.157378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.157927s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 1 [ RunTime:0.159671s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin_log` WHERE  `admin_id` = 1 ORDER BY `id` DESC LIMIT 0,10 [ RunTime:0.142049s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:58:35+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/logout
+[ sql ] [ DB ] CONNECT:[ UseTime:0.250669s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin` [ RunTime:0.129081s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.158931s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_admin`  SET `token`='',`updatetime`=1548863915  WHERE  `id` = 1 [ RunTime:0.159206s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:58:43+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.172392s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin` [ RunTime:0.138380s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin` WHERE  `username` = 'sfc' LIMIT 1 [ RunTime:0.158622s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_admin`  SET `logintime`=1548863923,`token`='ba4d52a1-c88b-4724-96e9-cec1acdf4bee',`updatetime`=1548863923  WHERE  `id` = 1 [ RunTime:0.175805s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.147267s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"b92be45c433bfb886aa765c94ef0d335\",\"username\":\"sfc\"}' , '/admin/index/login' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548863923) [ RunTime:0.127951s ]
+[ error ] [2]http_response_code() expects parameter 1 to be integer, array given
+---------------------------------------------------------------
+[ 2019-01-30T23:58:54+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.206679s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.168355s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"__token__\":\"b92be45c433bfb886aa765c94ef0d335\",\"username\":\"sfc\"}' , '/admin/index/login' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548863934) [ RunTime:0.159237s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:59:45+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/login
+[运行时间：0.116863s] [吞吐率：8.56req/s] [内存消耗：2,594.13kb] [文件加载：78]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.015502s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/general/profile?ref=addtabs',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005612s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.002919s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->login[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/common\view\tpl\dispatch_jump.tpl [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'code',
+  6 => 'msg',
+  7 => 'data',
+  8 => 'url',
+  9 => 'wait',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000851s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:48+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[运行时间：1.240931s] [吞吐率：0.81req/s] [内存消耗：3,601.13kb] [文件加载：97]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000062s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.009154s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/index/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004063s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.001723s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000869s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.222764s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.137806s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.132229s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.167045s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.148922s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.167133s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:59:49+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/backend.css.map
+[运行时间：0.075139s] [吞吐率：13.31req/s] [内存消耗：1,518.90kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013177s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:49+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/bootstrap.css.map
+[运行时间：0.083932s] [吞吐率：11.91req/s] [内存消耗：1,518.94kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017937s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[运行时间：1.105065s] [吞吐率：0.90req/s] [内存消耗：3,451.38kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000049s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013716s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003690s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.002284s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totalviews',
+  7 => 'totalorder',
+  8 => 'totalorderamount',
+  9 => 'todayuserlogin',
+  10 => 'todayusersignup',
+  11 => 'todayorder',
+  12 => 'unsettleorder',
+  13 => 'sevendnu',
+  14 => 'sevendau',
+  15 => 'paylist',
+  16 => 'createlist',
+  17 => 'addonversion',
+  18 => 'uploadmode',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000827s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.203428s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.103439s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.167166s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158726s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162612s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.146198s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/ajax/lang?callback=define&controllername=index&v=1548863987
+[运行时间：0.179413s] [吞吐率：5.57req/s] [内存消耗：2,501.58kb] [文件加载：76]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.026437s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/index/index',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'v' => '1548863987',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.006643s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.029958s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000442s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/fastadmin.css.map
+[运行时间：0.062793s] [吞吐率：15.93req/s] [内存消耗：1,518.94kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000056s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.021293s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/skins/skin-green.css.map
+[运行时间：0.077224s] [吞吐率：12.95req/s] [内存消耗：1,518.89kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000053s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.017342s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/backend.css.map
+[运行时间：0.062277s] [吞吐率：16.06req/s] [内存消耗：1,518.90kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000044s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.018113s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'backend.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/bootstrap.css.map
+[运行时间：0.108379s] [吞吐率：9.23req/s] [内存消耗：1,518.94kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000043s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.055640s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'bootstrap.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/fastadmin.css.map
+[运行时间：0.119485s] [吞吐率：8.37req/s] [内存消耗：1,518.94kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.064026s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'fastadmin.css.map',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:50+08:00 ] 127.0.0.1 GET sfc.jyqc.com/assets/css/skins/skin-green.css.map
+[运行时间：0.174757s] [吞吐率：5.72req/s] [内存消耗：1,518.89kb] [文件加载：53]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000059s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010872s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'assets',
+    1 => 'css',
+    2 => 'skins',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-30T23:59:51+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/ajax/lang?callback=define&controllername=dashboard&v=1548863988
+[运行时间：0.161361s] [吞吐率：6.20req/s] [内存消耗：2,500.31kb] [文件加载：76]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.022152s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/dashboard?addtabs=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'v' => '1548863988',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004242s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.003063s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000413s ]
+[ info ] [ LOG ] INIT File
