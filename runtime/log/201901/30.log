@@ -1,0 +1,264 @@
+---------------------------------------------------------------
+[ 2019-01-30T22:47:47+08:00 ] 127.0.0.1 GET sfc.jyqc.com/index/user/index.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.231946s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_user_token` [ RunTime:0.167644s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_user_token` WHERE  `token` = 'd8aa945b8448d8a41ab99c04b04f9e522294b47c' LIMIT 1 [ RunTime:0.159540s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:50:25+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.249572s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin` [ RunTime:0.168499s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_admin` WHERE  `username` = 'sfc' LIMIT 1 [ RunTime:0.162149s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_admin`  SET `logintime`=1548859825,`token`='706e480a-fd70-48df-af9a-603a023003dc',`updatetime`=1548859825  WHERE  `id` = 1 [ RunTime:0.173330s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.163555s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"67d0c24a8e5b20591daeee8aae5d70e9\",\"username\":\"sfc\",\"captcha\":\"qvtf\"}' , '/admin/index/login.html' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548859825) [ RunTime:0.168565s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:50:27+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247935s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167545s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159821s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.160656s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.160343s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.165759s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:50:28+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.246292s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167931s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.148046s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159346s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.165272s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.162515s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:54:23+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/general/config?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.255561s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.161590s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.169475s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.160531s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.170390s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_config` [ RunTime:0.166335s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_config` [ RunTime:0.169799s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'general/config' LIMIT 1 [ RunTime:0.151522s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:54:44+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/general.config/edit
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247217s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167886s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.158601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159717s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.170776s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_config` [ RunTime:0.163873s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_config` [ RunTime:0.159985s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='name',`group`='basic',`title`='Site name',`tip`='请填写站点名称',`type`='string',`value`='顺风友车',`content`='',`rule`='required',`extend`=''  WHERE  `id` = 1 [ RunTime:0.160110s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='beian',`group`='basic',`title`='Beian',`tip`='粤ICP备15054802号-4',`type`='string',`value`='',`content`='',`rule`='',`extend`=''  WHERE  `id` = 2 [ RunTime:0.158594s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='cdnurl',`group`='basic',`title`='Cdn url',`tip`='如果静态资源使用第三方云储存请配置该值',`type`='string',`value`='',`content`='',`rule`='',`extend`=''  WHERE  `id` = 3 [ RunTime:0.164404s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='version',`group`='basic',`title`='Version',`tip`='如果静态资源有变动请重新配置该值',`type`='string',`value`='1.0.1',`content`='',`rule`='required',`extend`=''  WHERE  `id` = 4 [ RunTime:0.164044s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='timezone',`group`='basic',`title`='Timezone',`tip`='',`type`='string',`value`='Asia/Shanghai',`content`='',`rule`='required',`extend`=''  WHERE  `id` = 5 [ RunTime:0.162214s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='forbiddenip',`group`='basic',`title`='Forbidden ip',`tip`='一行一条记录',`type`='text',`value`='',`content`='',`rule`='',`extend`=''  WHERE  `id` = 6 [ RunTime:0.165926s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='languages',`group`='basic',`title`='Languages',`tip`='',`type`='array',`value`='{\"backend\":\"zh-cn\",\"frontend\":\"zh-cn\"}',`content`='',`rule`='required',`extend`=''  WHERE  `id` = 7 [ RunTime:0.161673s ]
+[ sql ] [ SQL ] UPDATE `sfc_test_config`  SET `name`='fixedpage',`group`='basic',`title`='Fixed page',`tip`='请尽量输入左侧菜单栏存在的链接',`type`='string',`value`='dashboard',`content`='',`rule`='required',`extend`=''  WHERE  `id` = 8 [ RunTime:0.166957s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_config` [ RunTime:0.160882s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.161809s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('常规管理 系统配置 编辑' , '{\"row\":{\"name\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"beian\":\"\",\"cdnurl\":\"\",\"version\":\"1.0.1\",\"timezone\":\"Asia\\/Shanghai\",\"forbiddenip\":\"\",\"languages\":\"{\\\"backend\\\":\\\"zh-cn\\\",\\\"frontend\\\":\\\"zh-cn\\\"}\",\"fixedpage\":\"dashboard\"}}' , '/admin/general.config/edit' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860084) [ RunTime:0.169535s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:54:49+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.250134s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.177818s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.170130s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.170054s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.172868s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.165733s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:10+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.261110s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.175448s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159798s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159727s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.161130s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.165205s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"upyun\",\"force\":\"0\",\"uid\":\"2437\",\"token\":\"3da166d1-c15b-4dbf-be28-b1705b2eefd2\",\"version\":\"1.0.1\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/admin/addon/install' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860109) [ RunTime:0.167074s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:11+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247647s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.158686s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.158859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159252s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.160961s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.165830s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860111) [ RunTime:0.160549s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:25+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247461s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.157901s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.169434s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159573s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.166651s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.140035s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"third\",\"force\":\"0\",\"uid\":\"2437\",\"token\":\"3da166d1-c15b-4dbf-be28-b1705b2eefd2\",\"version\":\"1.0.5\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/admin/addon/install' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860125) [ RunTime:0.158768s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:27+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.219711s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.163191s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159991s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159728s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.160618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.163906s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860126) [ RunTime:0.165404s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:34+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.241234s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.157610s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159799s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.160810s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.161163s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"umeditor\",\"force\":\"0\",\"uid\":\"2437\",\"token\":\"3da166d1-c15b-4dbf-be28-b1705b2eefd2\",\"version\":\"1.0.2\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/admin/addon/install' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860134) [ RunTime:0.163634s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:41+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.239899s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.156702s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.160939s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158326s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.160552s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"markdown\",\"force\":\"0\",\"uid\":\"2437\",\"token\":\"3da166d1-c15b-4dbf-be28-b1705b2eefd2\",\"version\":\"1.0.1\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/admin/addon/install' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860141) [ RunTime:0.139509s ]
+---------------------------------------------------------------
+[ 2019-01-30T22:55:43+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.239334s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.166163s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.149626s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159865s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.161333s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.157031s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860143) [ RunTime:0.159308s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:04:41+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/install
+[ sql ] [ DB ] CONNECT:[ UseTime:0.250661s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167399s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.455263s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.129881s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.166829s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms' , 'CMS管理' , 1 , 'fa fa-list' , 0 , 'normal' , 1548860666 , 1548860666) [ RunTime:0.180737s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives' , '内容管理' , 'fa fa-file-text-o' , 1 , 85 , 'normal' , 1548860666 , 1548860666) [ RunTime:0.165138s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/index' , '查看' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1548860666 , 1548860666) [ RunTime:0.159258s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `remark` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/content' , '副表管理' , '用于管理模型副表的数据列表,不建议在此进行删除操作' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1548860667 , 1548860667) [ RunTime:0.159524s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/add' , '添加' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1548860667 , 1548860667) [ RunTime:0.159614s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/edit' , '修改' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1548860667 , 1548860667) [ RunTime:0.129359s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/del' , '删除' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1548860667 , 1548860667) [ RunTime:0.159443s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/archives/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 86 , 'normal' , 1548860667 , 1548860667) [ RunTime:0.159020s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel' , '栏目管理' , 'fa fa-list' , '用于管理网站的分类，可进行无限级分类，注意只有类型为列表的才可以添加文章' , 1 , 85 , 'normal' , 1548860667 , 1548860667) [ RunTime:0.141116s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/index' , '查看' , 0 , 'fa fa-circle-o' , 93 , 'normal' , 1548860668 , 1548860668) [ RunTime:0.157473s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/add' , '添加' , 0 , 'fa fa-circle-o' , 93 , 'normal' , 1548860668 , 1548860668) [ RunTime:0.159042s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/edit' , '修改' , 0 , 'fa fa-circle-o' , 93 , 'normal' , 1548860668 , 1548860668) [ RunTime:0.159453s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/del' , '删除' , 0 , 'fa fa-circle-o' , 93 , 'normal' , 1548860668 , 1548860668) [ RunTime:0.159576s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 93 , 'normal' , 1548860668 , 1548860668) [ RunTime:0.159748s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/channel/admin' , '栏目授权' , 0 , 'fa fa-circle-o' , 93 , 'normal' , 1548860668 , 1548860668) [ RunTime:0.158897s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx' , '模型管理' , 'fa fa-th' , '在线添加修改删除模型，管理模型字段和相关模型数据' , 1 , 85 , 'normal' , 1548860669 , 1548860669) [ RunTime:0.440062s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/index' , '查看' , 0 , 'fa fa-circle-o' , 100 , 'normal' , 1548860669 , 1548860669) [ RunTime:0.158796s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/add' , '添加' , 0 , 'fa fa-circle-o' , 100 , 'normal' , 1548860669 , 1548860669) [ RunTime:0.199332s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/edit' , '修改' , 0 , 'fa fa-circle-o' , 100 , 'normal' , 1548860669 , 1548860669) [ RunTime:0.169424s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/del' , '删除' , 0 , 'fa fa-circle-o' , 100 , 'normal' , 1548860669 , 1548860669) [ RunTime:0.158946s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/modelx/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 100 , 'normal' , 1548860670 , 1548860670) [ RunTime:0.163908s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `ismenu` , `remark` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields' , '字段管理' , 'fa fa-fields' , 0 , '用于管理模型或表单的字段，进行相关的增删改操作' , 100 , 'normal' , 1548860670 , 1548860670) [ RunTime:0.174275s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/index' , '查看' , 0 , 'fa fa-circle-o' , 106 , 'normal' , 1548860670 , 1548860670) [ RunTime:0.160237s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/add' , '添加' , 0 , 'fa fa-circle-o' , 106 , 'normal' , 1548860670 , 1548860670) [ RunTime:0.158312s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/edit' , '修改' , 0 , 'fa fa-circle-o' , 106 , 'normal' , 1548860670 , 1548860670) [ RunTime:0.159519s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/del' , '删除' , 0 , 'fa fa-circle-o' , 106 , 'normal' , 1548860670 , 1548860670) [ RunTime:0.163416s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/fields/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 106 , 'normal' , 1548860671 , 1548860671) [ RunTime:0.165596s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags' , '标签管理' , 'fa fa-tags' , '用于管理文章关联的标签,标签的添加在添加文章时自动维护,无需手动添加标签' , 1 , 85 , 'normal' , 1548860671 , 1548860671) [ RunTime:0.178911s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/index' , '查看' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1548860671 , 1548860671) [ RunTime:0.166132s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/add' , '添加' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1548860671 , 1548860671) [ RunTime:0.143149s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/edit' , '修改' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1548860671 , 1548860671) [ RunTime:0.163081s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/del' , '删除' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1548860671 , 1548860671) [ RunTime:0.165149s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/tags/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 112 , 'normal' , 1548860672 , 1548860672) [ RunTime:0.160531s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block' , '区块管理' , 'fa fa-th-large' , '用于管理站点的自定义区块内容,常用于广告、JS脚本、焦点图、片段代码等' , 1 , 85 , 'normal' , 1548860672 , 1548860672) [ RunTime:0.168278s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/index' , '查看' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1548860672 , 1548860672) [ RunTime:0.158415s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/add' , '添加' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1548860672 , 1548860672) [ RunTime:0.162182s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/edit' , '修改' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1548860672 , 1548860672) [ RunTime:0.166216s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/del' , '删除' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1548860672 , 1548860672) [ RunTime:0.159932s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/block/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 118 , 'normal' , 1548860673 , 1548860673) [ RunTime:0.159001s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page' , '单页管理' , 'fa fa-file' , '用于管理网站的单页面，可任意创建修改删除单页面' , 1 , 85 , 'normal' , 1548860673 , 1548860673) [ RunTime:0.159441s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/index' , '查看' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1548860673 , 1548860673) [ RunTime:0.158800s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/add' , '添加' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1548860673 , 1548860673) [ RunTime:0.439210s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/edit' , '修改' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1548860674 , 1548860674) [ RunTime:0.169042s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/del' , '删除' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1548860674 , 1548860674) [ RunTime:0.159220s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/page/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 124 , 'normal' , 1548860674 , 1548860674) [ RunTime:0.162451s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment' , '评论管理' , 'fa fa-comment' , '用于管理用户在网站上发表的评论，可任意修改或隐藏评论' , 1 , 85 , 'normal' , 1548860674 , 1548860674) [ RunTime:0.166070s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/index' , '查看' , 0 , 'fa fa-circle-o' , 130 , 'normal' , 1548860674 , 1548860674) [ RunTime:0.159719s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/add' , '添加' , 0 , 'fa fa-circle-o' , 130 , 'normal' , 1548860674 , 1548860674) [ RunTime:0.167445s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/edit' , '修改' , 0 , 'fa fa-circle-o' , 130 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.160704s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/del' , '删除' , 0 , 'fa fa-circle-o' , 130 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.162410s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/comment/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 130 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.167270s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `remark` , `ismenu` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform' , '自定义表单管理' , 'fa fa-list' , '可在线创建自定义表单，管理表单字段和数据列表' , 1 , 85 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.158598s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/index' , '查看' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.159379s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/add' , '添加' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.158630s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/edit' , '修改' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1548860675 , 1548860675) [ RunTime:0.159710s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/del' , '删除' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1548860676 , 1548860676) [ RunTime:0.159574s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diyform/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 136 , 'normal' , 1548860676 , 1548860676) [ RunTime:0.158944s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `ismenu` , `remark` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata' , '自定义表单数据管理' , 'fa fa-list' , 0 , '可在线管理自定义表单的数据列表' , 85 , 'normal' , 1548860676 , 1548860676) [ RunTime:0.160042s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/index' , '查看' , 0 , 'fa fa-circle-o' , 142 , 'normal' , 1548860676 , 1548860676) [ RunTime:0.158942s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/add' , '添加' , 0 , 'fa fa-circle-o' , 142 , 'normal' , 1548860676 , 1548860676) [ RunTime:0.157851s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/edit' , '修改' , 0 , 'fa fa-circle-o' , 142 , 'normal' , 1548860676 , 1548860676) [ RunTime:0.160659s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/del' , '删除' , 0 , 'fa fa-circle-o' , 142 , 'normal' , 1548860677 , 1548860677) [ RunTime:0.158392s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/diydata/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 142 , 'normal' , 1548860677 , 1548860677) [ RunTime:0.159384s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `icon` , `ismenu` , `remark` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order' , '订单管理' , 'fa fa-cny' , 1 , '可在线管理付费查看所产生的订单' , 85 , 'normal' , 1548860677 , 1548860677) [ RunTime:0.165391s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/index' , '查看' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1548860677 , 1548860677) [ RunTime:0.163316s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/add' , '添加' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1548860677 , 1548860677) [ RunTime:0.159355s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/edit' , '修改' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1548860677 , 1548860677) [ RunTime:0.170144s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/del' , '删除' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1548860678 , 1548860678) [ RunTime:0.179895s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_auth_rule` (`name` , `title` , `ismenu` , `icon` , `pid` , `status` , `createtime` , `updatetime`) VALUES ('cms/order/multi' , '批量更新' , 0 , 'fa fa-circle-o' , 148 , 'normal' , 1548860678 , 1548860678) [ RunTime:0.157976s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.159954s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 安装' , '{\"name\":\"cms\",\"force\":\"0\",\"uid\":\"2437\",\"token\":\"3da166d1-c15b-4dbf-be28-b1705b2eefd2\",\"version\":\"1.0.21\",\"faversion\":\"1.0.0.20190111_beta\"}' , '/admin/addon/install' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860681) [ RunTime:0.157763s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:04:44+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.248045s ] mysql:host=120.78.135.109;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.157950s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.169983s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.449747s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.249597s ]
+[ sql ] [ SQL ] SELECT * FROM `sfc_test_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.768699s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.162264s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/admin/index/index' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548860684) [ RunTime:0.469080s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:13:26+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?ref=addtabs
+[ sql ] [ DB ] CONNECT:[ UseTime:0.267198s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.158290s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.160476s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158570s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.167397s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:13:27+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.244755s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.159502s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.168623s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.130046s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.164960s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:13:29+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.507715s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.160832s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.175499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.160508s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.133919s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.459063s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:13:30+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.258923s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.168099s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.162100s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.176056s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.175103s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `sfc_test_auth_rule` WHERE  `name` = 'addon' LIMIT 1 [ RunTime:0.167559s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:26:42+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon/config?name=upyun&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247172s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.163800s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.460213s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.169575s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.146539s ]
+---------------------------------------------------------------
+[ 2019-01-30T23:33:03+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/config?name=upyun&dialog=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.249146s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.166379s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.169468s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162250s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.167231s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 配置' , '{\"name\":\"upyun\",\"dialog\":\"1\",\"row\":{\"bucket\":\"static-sfc-jy\",\"cdnurl\":\"http:\\/\\/static-sfc.junyiqiche.com\",\"uploadurl\":\"https:\\/\\/v0.api.upyun.com\\/static-sfc-jy\",\"notifyurl\":\"http:\\/\\/sfc.junyiqiche.com\\/addons\\/index\\/notify\",\"formkey\":\"FGq5W4pwxVvQZHlUEH\\/JFK6Dwpg=\",\"savekey\":\"\\/uploads\\/{year}{mon}{day}\\/{filemd5}{.suffix}\",\"expire\":\"7200\",\"maxsize\":\"20M\",\"mimetype\":\"jpg,png,bmp,jpeg,gif,zip,rar,xls,xlsx,pdf\",\"multiple\":\"1\"}}' , '/admin/addon/config?name=upyun&dialog=1' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548862383) [ RunTime:0.169051s ]
