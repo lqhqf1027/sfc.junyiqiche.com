@@ -4654,3 +4654,408 @@
 [ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162773s ]
 [ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.166334s ]
 [ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 配置' , '{\"name\":\"cms\",\"dialog\":\"1\",\"row\":{\"sitename\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"title\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"keywords\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"description\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"theme\":\"default\",\"qrcode\":\"\\/assets\\/addons\\/cms\\/img\\/qrcode.png\",\"default_archives_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_channel_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_block_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_page_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"domain\":\"\",\"rewrite\":\"{\\\"index\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/$\\\",\\\"archives\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/a\\\\\\/[:diyname]\\\",\\\"tags\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/t\\\\\\/[:name]\\\",\\\"page\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/p\\\\\\/[:diyname]\\\",\\\"search\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/s\\\",\\\"channel\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/c\\\\\\/[:diyname]\\\",\\\"diyform\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/d\\\\\\/[:diyname]\\\"}\",\"wxappid\":\"wx1354be51d05acc8c\",\"wxappsecret\":\"b032d4cd651b6b673f1cfa361b83b7d6\",\"apikey\":\"\",\"archiveseditmode\":\"dialog\"}}' , '/admin/addon/config?name=cms&dialog=1' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548864644) [ RunTime:0.139401s ]
+---------------------------------------------------------------
+[ 2019-01-31T00:32:13+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon/config?name=cms&dialog=1
+[运行时间：1.278229s] [吞吐率：0.78req/s] [内存消耗：3,385.43kb] [文件加载：85]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000480s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.032202s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'cms',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004662s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.007242s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Addon.php ]
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\view\addon\config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000930s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.247700s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.160776s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.169829s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.158646s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.162222s ]
+---------------------------------------------------------------
+[ 2019-01-31T00:32:13+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/ajax/lang?callback=define&controllername=addon&v=1548865932
+[运行时间：0.092753s] [吞吐率：10.78req/s] [内存消耗：2,503.53kb] [文件加载：76]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000055s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007137s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon/config?name=cms&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1548865932',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004224s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.002871s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000932s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-31T00:32:25+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/config?name=cms&dialog=1
+[运行时间：1.457166s] [吞吐率：0.69req/s] [内存消耗：3,402.60kb] [文件加载：91]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000048s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.007694s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon/config?name=cms&dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://sfc.jyqc.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1988',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'cms',
+  'dialog' => '1',
+  'row' => 
+  array (
+    'sitename' => '顺风友车',
+    'title' => '顺风友车',
+    'keywords' => '顺风友车',
+    'description' => '顺风友车',
+    'theme' => 'default',
+    'qrcode' => '/assets/addons/cms/img/qrcode.png',
+    'default_archives_img' => '/assets/addons/cms/img/noimage.jpg',
+    'default_channel_img' => '/assets/addons/cms/img/noimage.jpg',
+    'default_block_img' => '/assets/addons/cms/img/noimage.jpg',
+    'default_page_img' => '/assets/addons/cms/img/noimage.jpg',
+    'domain' => '',
+    'rewrite' => '{"index\\/index":"\\/cms\\/$","archives\\/index":"\\/cms\\/a\\/[:diyname]","tags\\/index":"\\/cms\\/t\\/[:name]","page\\/index":"\\/cms\\/p\\/[:diyname]","search\\/index":"\\/cms\\/s","channel\\/index":"\\/cms\\/c\\/[:diyname]","diyform\\/index":"\\/cms\\/d\\/[:diyname]"}',
+    'wxappid' => 'wx1354be51d05acc8c',
+    'wxappsecret' => 'b032d4cd651b6b673f1cfa361b83b7d6',
+    'apikey' => '',
+    'archiveseditmode' => 'dialog',
+  ),
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005879s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.001788s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.329198s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.240574s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.169842s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.161050s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.168389s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.171201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.165443s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 配置' , '{\"name\":\"cms\",\"dialog\":\"1\",\"row\":{\"sitename\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"title\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"keywords\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"description\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"theme\":\"default\",\"qrcode\":\"\\/assets\\/addons\\/cms\\/img\\/qrcode.png\",\"default_archives_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_channel_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_block_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_page_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"domain\":\"\",\"rewrite\":\"{\\\"index\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/$\\\",\\\"archives\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/a\\\\\\/[:diyname]\\\",\\\"tags\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/t\\\\\\/[:name]\\\",\\\"page\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/p\\\\\\/[:diyname]\\\",\\\"search\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/s\\\",\\\"channel\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/c\\\\\\/[:diyname]\\\",\\\"diyform\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/d\\\\\\/[:diyname]\\\"}\",\"wxappid\":\"wx1354be51d05acc8c\",\"wxappsecret\":\"b032d4cd651b6b673f1cfa361b83b7d6\",\"apikey\":\"\",\"archiveseditmode\":\"dialog\"}}' , '/admin/addon/config?name=cms&dialog=1' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548865945) [ RunTime:0.159760s ]
+---------------------------------------------------------------
+[ 2019-01-31T00:32:54+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/ajax/wipecache?type=all&_=1548864218486
+[运行时间：0.156395s] [吞吐率：6.39req/s] [内存消耗：2,586.29kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000603s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013104s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'wipecache',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon?ref=addtabs',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'type' => 'all',
+  '_' => '1548864218486',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.004379s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.001429s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->wipecache[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Ajax.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000625s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-31T00:33:22+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/addon/config?name=cms&dialog=1
+[运行时间：1.227942s] [吞吐率：0.81req/s] [内存消耗：3,530.89kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000046s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.012628s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon?addtabs=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'cms',
+  'dialog' => '1',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003516s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.004127s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Addon.php ]
+[ info ] [ VIEW ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\view\addon\config.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'addon',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000758s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.259506s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.167589s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.172029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.168150s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.174727s ]
+---------------------------------------------------------------
+[ 2019-01-31T00:33:22+08:00 ] 127.0.0.1 GET sfc.jyqc.com/admin/ajax/lang?callback=define&controllername=addon&v=1548866001
+[运行时间：0.120482s] [吞吐率：8.30req/s] [内存消耗：2,503.53kb] [文件加载：76]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.010021s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon/config?name=cms&dialog=1',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'addon',
+  'v' => '1548866001',
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.005491s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.004187s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000874s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-01-31T00:33:41+08:00 ] 127.0.0.1 POST sfc.jyqc.com/admin/addon/config?name=cms&dialog=1
+[运行时间：1.350111s] [吞吐率：0.74req/s] [内存消耗：3,402.60kb] [文件加载：91]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000052s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.013054s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'addon',
+    2 => 'config',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'PHPSESSID=aat4bgvu8j0qf9s6ubblmf2bd1; Hm_lvt_f8d0a8c400404989e195270b0bbf060a=1548859666; Hm_lpvt_f8d0a8c400404989e195270b0bbf060a=1548859670',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://sfc.jyqc.com/admin/addon/config?name=cms&dialog=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://sfc.jyqc.com',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '1990',
+  'connection' => 'close',
+  'host' => 'sfc.jyqc.com',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'cms',
+  'dialog' => '1',
+  'row' => 
+  array (
+    'sitename' => '顺风友车',
+    'title' => '顺风友车1',
+    'keywords' => '顺风友车1',
+    'description' => '顺风友车',
+    'theme' => 'default',
+    'qrcode' => '/assets/addons/cms/img/qrcode.png',
+    'default_archives_img' => '/assets/addons/cms/img/noimage.jpg',
+    'default_channel_img' => '/assets/addons/cms/img/noimage.jpg',
+    'default_block_img' => '/assets/addons/cms/img/noimage.jpg',
+    'default_page_img' => '/assets/addons/cms/img/noimage.jpg',
+    'domain' => '',
+    'rewrite' => '{"index\\/index":"\\/cms\\/$","archives\\/index":"\\/cms\\/a\\/[:diyname]","tags\\/index":"\\/cms\\/t\\/[:name]","page\\/index":"\\/cms\\/p\\/[:diyname]","search\\/index":"\\/cms\\/s","channel\\/index":"\\/cms\\/c\\/[:diyname]","diyform\\/index":"\\/cms\\/d\\/[:diyname]"}',
+    'wxappid' => 'wx1354be51d05acc8c',
+    'wxappsecret' => 'b032d4cd651b6b673f1cfa361b83b7d6',
+    'apikey' => '',
+    'archiveseditmode' => 'dialog',
+  ),
+)
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.003900s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run \addons\upyun\Upyun @upload_config_init [ RunTime:0.002211s ]
+[ info ] [ LANG ] E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\public/../application/admin/lang/zh-cn/addon.php
+[ info ] [ RUN ] app\admin\controller\Addon->config[ E:\phpStudy\PHPTutorial\WWW\sfc.junyiqiche.com\application\admin\controller\Addon.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.295819s ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.243240s ] mysql:host=120.78.135.109;port=3306;dbname=sfc_test;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_group_access` [ RunTime:0.159777s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `sfc_test_auth_group_access` `aga` LEFT JOIN `sfc_test_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.159846s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_auth_rule` [ RunTime:0.159756s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `sfc_test_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.171033s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `sfc_test_admin_log` [ RunTime:0.163939s ]
+[ sql ] [ SQL ] INSERT INTO `sfc_test_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('插件管理 配置' , '{\"name\":\"cms\",\"dialog\":\"1\",\"row\":{\"sitename\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"title\":\"\\u987a\\u98ce\\u53cb\\u8f661\",\"keywords\":\"\\u987a\\u98ce\\u53cb\\u8f661\",\"description\":\"\\u987a\\u98ce\\u53cb\\u8f66\",\"theme\":\"default\",\"qrcode\":\"\\/assets\\/addons\\/cms\\/img\\/qrcode.png\",\"default_archives_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_channel_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_block_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"default_page_img\":\"\\/assets\\/addons\\/cms\\/img\\/noimage.jpg\",\"domain\":\"\",\"rewrite\":\"{\\\"index\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/$\\\",\\\"archives\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/a\\\\\\/[:diyname]\\\",\\\"tags\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/t\\\\\\/[:name]\\\",\\\"page\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/p\\\\\\/[:diyname]\\\",\\\"search\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/s\\\",\\\"channel\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/c\\\\\\/[:diyname]\\\",\\\"diyform\\\\\\/index\\\":\\\"\\\\\\/cms\\\\\\/d\\\\\\/[:diyname]\\\"}\",\"wxappid\":\"wx1354be51d05acc8c\",\"wxappsecret\":\"b032d4cd651b6b673f1cfa361b83b7d6\",\"apikey\":\"\",\"archiveseditmode\":\"dialog\"}}' , '/admin/addon/config?name=cms&dialog=1' , 1 , 'sfc' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36' , '127.0.0.1' , 1548866021) [ RunTime:0.129565s ]
