@@ -1,19 +1,12 @@
 <import src="/assets/libs/zanui/tab/index.wxml" />
 <import src="/assets/libs/zanui/loadmore/index.wxml" />
 <view class="container">
-  <!-- S 焦点图 -->
-  <view class="focus">
-    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000" class="swiper">
-      <block wx:for="{{ bannerList }}" wx:key="key">
-        <navigator url="{{item.url}}">
-          <swiper-item>
-            <image src="{{item.image}}" width="100%" height="100%" />
-            <text class="text">{{item.title}}</text>
-          </swiper-item>
-        </navigator>
-      </block>
-    </swiper>
+   
+  <view class="focus" style='text-align:center'>
+    <text style='font-size:18pt'>
+    顺风友车
+    </text>
   </view>
-  <!-- E 焦点图 -->
+  
  
 </view>
