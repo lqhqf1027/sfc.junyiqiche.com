@@ -24,7 +24,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => '顺风友车',
+    'value' => '顺风友车1',
     'rule' => 'required',
     'msg' => '',
     'tip' => '',
@@ -39,7 +39,7 @@ return array (
     'content' => 
     array (
     ),
-    'value' => '顺风友车',
+    'value' => '顺风友车1',
     'rule' => 'required',
     'msg' => '',
     'tip' => '',
